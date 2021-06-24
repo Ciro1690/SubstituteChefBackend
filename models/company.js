@@ -15,7 +15,6 @@ class Company {
             throw new BadRequestError(`Duplicate company: ${name}`);
 
         let coordinates = await getCoords(address);
-
         const result = await db.query(
         `INSERT INTO companies
             (name,
